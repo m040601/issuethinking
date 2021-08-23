@@ -1,257 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/qmacro/thinking-aloud</id>
-    <title>Thinking Aloud</title>
-    <updated>2021-08-09T11:34:20.809Z</updated>
+    <id>https://github.com/m040601/issuethinking</id>
+    <title>Issue Thinking Aloud</title>
+    <updated>2021-08-23T03:15:57.561Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
-        <name>DJ Adams</name>
-        <email>qmacro@gmail.com</email>
-        <uri>https://github.com/qmacro</uri>
+        <name>Issue Thinker Feed author</name>
+        <email>issues@example.com</email>
+        <uri>https://github.com/m040601</uri>
     </author>
-    <link rel="alternate" href="https://github.com/qmacro/thinking-aloud"/>
-    <link rel="self" href="https://github.com/qmacro/thinking-aloud"/>
+    <link rel="alternate" href="https://github.com/m040601/issuethinking"/>
+    <link rel="self" href="https://github.com/m040601/issuethinking"/>
     <subtitle>A journal</subtitle>
-    <rights>DJ Adams</rights>
+    <rights>Issue Thinker Copyright</rights>
+    <entry>
+        <title type="html"><![CDATA[Another issue with 'entry']]></title>
+        <id>https://github.com/m040601/issuethinking/issues/6</id>
+        <link href="https://github.com/m040601/issuethinking/issues/6"/>
+        <updated>2021-08-23T02:57:00.000Z</updated>
+        <content type="html"><![CDATA[<p>bla</p>]]></content>
+        <category label="entry"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021-07-12 11:51:29 gh with tag]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/5</id>
+        <link href="https://github.com/m040601/issuethinking/issues/5"/>
+        <updated>2021-08-23T02:48:00.000Z</updated>
+        <content type="html"><![CDATA[<p>ii</p>]]></content>
+        <category label="entry"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2021-08-19 11:51:29 Some other issue]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/2</id>
+        <link href="https://github.com/m040601/issuethinking/issues/2"/>
+        <updated>2021-08-23T02:42:43.000Z</updated>
+        <content type="html"><![CDATA[<p>iii</p>]]></content>
+        <category label="entry"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2021-08-09 11:51:29 Demo journal creation in tmux popup]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/30</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/30"/>
-        <updated>2021-08-09T10:51:30.000Z</updated>
-        <content type="html"><![CDATA[<p>Here's an example of writing a new journal entry, invoked from the tmux binding "prefix M-j", in a popup window.</p>
-<p>I'll record with asciinema (I need to fix that vim hack) and share it online.</p>
-<p><img src="https://user-images.githubusercontent.com/73068/128700002-5403c26c-5d2c-419e-a1c9-d7b061c9c31d.gif" alt="journal" /></p>
-<p>Asciinema link ☞ https://asciinema.org/a/429621</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-08-08 21:28:34 Revisiting my tmux workflow and journalling]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/28</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/28"/>
-        <updated>2021-08-08T20:28:35.000Z</updated>
-        <content type="html"><![CDATA[<p>I've been learning lots about <code>tmux</code> over the last few days, both from long time friend Rob Muhlestein and latterly from Waylon Walker. So much so that I am at the state where I want to refresh my workflow which is based upon it. New and improved key bindings, better use of sessions, and looking at employing popups, a new feature introduced with <code>tmux</code> version 3.2.</p>
-<p>I'm writing this journal entry within a popup; I've re-jigged the <code>j</code> function to become a more fully fledged <code>journal</code> script that I can then invoke with a key binding in <code>tmux</code>, which will then launch the script in a popup, like this:</p>
-<pre><code class="bash language-bash">tmux display-popup -E journal
-</code></pre>
-<p>The <code>journal</code> script is still very raw (I'm even writing it on a machine that doesn't have <code>shellcheck</code> installed yet, shame on me) but this is what it looks like so far:</p>
-<pre><code class="bash language-bash">#!/usr/bin/env bash
-
-declare tmpfile repo title
-tmpfile=$(mktemp /tmp/journal.XXXXXX)
-repo="$HOME/Projects/gh/github.com/qmacro/thinking-aloud"
-
-vim "$tmpfile"\
-&amp;&amp; cd "$repo" \
-&amp;&amp; echo -n "Title? " \
-&amp;&amp; read title \
-&amp;&amp; [ -n "$title" ] \
-&amp;&amp; gh issue create \
- --label entry \
- --title "$(date '+%Y-%m-%d %H:%M:%S') $title" \
- --body-file "$tmpfile"
-</code></pre>
-<p>So for those who have seen how I've created journal entries thus far, the main difference here is that I'm opening up the editor <em>first</em>, then asking for a journal title, and only if I get both do I use <code>gh issue create</code> as I have been doing already (but this time, taking the issue body from the temporary file I've just created and edited).</p>
-<p>I've just realised I should clean up that <code>$tmpfile</code> too. By the time this script hits my dotfiles repo, I'll have added that, and also tidied it up a bit more.</p>
-<p>I like the idea of writing a journal entry in a modal popup; I'm pondering whether I should do it in the context of a (new) <code>tmux</code> session, so I can switch back into a half-written journal entry later, but I also like the idea that a journal entry should be short - certainly short enough for a single popup session. So that's what I'm doing right now.</p>
-<p>Let's see how it goes.</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-07-26 07:08:57 I listened to a @betatalksnl podcast on a walk this morning …]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/26</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/26"/>
-        <updated>2021-07-26T06:48:27.000Z</updated>
-        <content type="html"><![CDATA[<p>I listened to a @betatalksnl podcast on a walk this morning with guest @irina_scurtu. The title of the episode is <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xNjIyMjcyLnJzcw/episode/QnV6enNwcm91dC04ODYyMDY4">10. Teaching developers & the importance of sharing knowledge, REST API and GraphQL - with Irina Scurtu</a> and it was an enjoyable 50 minutes. Here are a few items that I picked out, items that resonated with me and made me think some more:</p>
-<p><strong>The "Senior" prefix</strong></p>
-<p>The addition of the adjective "Senior" to a title, such as "Senior Developer". What does that imply? What <em>should</em> that imply? The case was made for "Senior" to denote, to require, a degree of mentorship. Teaching, training, mentoring more junior colleagues as part of the role description. This gets us away from using the "Senior" prefix for pure longevity in the position.</p>
-<p><strong>Your knowledge tank</strong></p>
-<p>Irina, a teacher and educator, showed a strong degree of awareness with regards to how full or empty her knowledge tank is. That is such an underrated ability - first to even realise that this is even a thing, and second, to recognise when one's tank is running close to empty.</p>
-<p>Teaching and sharing is built on a foundation of knowledge, but that knowledge can become depleted, in a way, and certainly in our field it can become stale and lose relevance over time. And there's always new stuff to learn (and subsequently teach). Over the years I've come to recognise this empty tank; sometimes it takes me longer than it should for me to do anything about it, but I do, eventually.</p>
-<p><strong>APIs</strong></p>
-<p>This podcast episode covered teaching and sharing knowledge, but there was also a section on APIs, particularly REST, gRPC and GraphQL. Irina started to recount her experience in how folks failed to properly implement a RESTful approach in their API design, and I was expecting some references to the lack of HATEOAS and auto-navigable resources*, but I was somewhat dismayed to hear more fundamental crimes are being perpetrated:</p>
-<ul>
-<li>adding action verbs to URLs (that are supposed to represent resources, not actions)</li>
-<li>not using the HTTP methods appropriately</li>
-<li>not even returning appropriate status codes</li>
-</ul>
-<p>This last point made me think of something I'd like to get put on my next nerdy custom tshirt:</p>
-<pre><code>200 NOT OK
-</code></pre>
-<p>Irina's thoughts on GraphQL made me smile, as they reflect my own, similar thoughts. GraphQL has arrived on the scene as a shiny new tool, and this is causing folks to want to use it … for everything. Moreover, I'm seeing folks champion GraphQL because it lets them get just the data they want, rather than (as they maintain) "the kitchen sink" that they'd get with a REST or plain HTTP call.</p>
-<p>That is rather narrow thinking, and based on, I suspect, their possibly limited experience of what a good RESTful or HTTP based API looks like. There are a lot of bad API designs out there - that's the fault of the designer, not the fault of REST or HTTP. So I see a lot of folks <a href="https://en.wikipedia.org/wiki/Don%27t_throw_the_baby_out_with_the_bathwater">throwing the baby out with the bathwater</a> because of this.</p>
-<p>What's more - and this was so wonderful to hear someone else (other than me) say this - <em>a lot of what GraphQL promises is already being delivered with OData</em>. I'll leave the explanation of that to another post, and instead leave you with a deliberately incendiary thought - GraphQL is OData, but in a far worse context, where processing and logic is pushed to the client, and the abuse of HTTP makes me categorise it in the same bucket as SOAP.</p>
-<p>Anyway, give the episode a listen, the <a href="https://twitter.com/betatalksnl">Beta Talks</a> folks ask great questions, and <a href="https://twitter.com/irina_scurtu">Irina</a> was a great guest.</p>
-<p>*(I <a href="https://anchor.fm/blog-cast/episodes/Ep-3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi">recorded a podcast episode</a> for <a href="https://anchor.fm/blog-cast/">Blog Cast</a>, reading aloud Kieran Potts' <a href="https://kieranpotts.com/rebranding-rest/">blog post of the same name</a> - I recommend this post or podcast for more information on this.)</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-07-20 08:42:14 I've decided to double down on my tmux fu …]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/25</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/25"/>
-        <updated>2021-07-20T07:42:20.000Z</updated>
-        <content type="html"><![CDATA[<p>I've decided to double down on my <code>tmux</code> fu by re-reading the man page and picking out groups of related commands that I can stick to my screen and practise when I remember.</p>
-<p>This week it's the set of commands related to panes. Here's what I have on my post-it note; they're all commands that are to be invoked following the prefix-key, and all relate to panes in the current window.</p>
-<p>|Command|Description|
-|-|-|
-|<code>o</code>|select the next pane|
-|<code>C-o</code>/<code>M-o</code>|rotate panes forwards / backwards|
-|<code>;</code>|move to the previously active pane
-|<code>!</code>|break the current pane out into a new window|
-|<code>m</code>/<code>M</code>|mark / unmark a pane|
-|<code>q</code>|briefly display the pane indices|
-|<code>x</code>|kill the current pane|
-|<code>z</code>|toggle the zoom state of the current pane|
-|<code>{</code>/<code>}</code>|swap the current pane with the previous / next one|
-|<code>M-1</code> to <code>M-5</code>|arrange panes in presets 1 through 5|
-|<code>space</code>|cycle through to next preset layout|</p>
-<p>I think having these commands written down, and then writing them down again in this journal entry, helps my mind assimilate them.</p>
-<p>I had to look up what "marking" a pane was all about - it's to mark a pane as the subject of a subsequent action. For example, you can identify a pane by marking it, and then using <code>join-pane</code> in another window to move that pane from where it was to the window you're now in. Like moving a window from one workspace to another, in the context of a window manager.</p>
-<p>Anyway, let's see how I get on. If I become more comfortable with these commands and remember to use them, I can move onto another group and repeat the learning process.</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-04-09 13:17:08 I've been thinking about field naming conventions …]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/19</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/19"/>
-        <updated>2021-04-09T12:36:43.000Z</updated>
-        <content type="html"><![CDATA[<p>I've been thinking about field naming conventions today, after the pleasantly opinionated threads on Twitter.</p>
-<p>I expressed that I like the old 5 character (usually uppercase) field names that appeared with R/2. Anyone who's been working in the SAP ecosphere will know what I'm taking about, fields like BUKRS, LIFNR, MANDT, WAERS, and so on.</p>
-<p>For me, there's a certain beauty about them, a uniformity and a neatness that I haven't seen elsewhere.</p>
-<p>Of course, this beauty can't be seen by some folks - they express a preference for longer names, but for me, those longer names are ugly, bring about a requirement for extra brain cycles to determine whether they should be camelCased, TitleCased, kebab-cased, snake_cased or some combination thereof.</p>
-<p>And what about how long they're allowed to be, or how short? There's another decision right there. Moreover, it's often the case that naming conventions are loose, so you see all sorts of ugly mismatched cases for variables scattered throughout code.</p>
-<p>Worst of all though are those variables that are so long (I'm thinking longer than 10 chars, that's double what my favourite style restricts itself to) makes code much harder to read. For me it's similar to reading a paragraph of prose when it's stretched out across the width of a widescreen monitor. Very hard on the eyes and the brain. There's a reason newspapers print articles in narrow columns.</p>
-<p>There's more. I've not even got on to prefixes. Hungarian notation, anyone? What do you prefer there? And should the prefix be separated by some sort of symbol, or be part of the variable name directly?</p>
-<p>Moreover, some folks have expressed an opinion (to which they're naturally entitled, we all are) that fields like BUKRS, MANDT and so on are restrictive because they're short forms of German words, and that's a barrier to entry.</p>
-<p>When I started in 1987 in the SAP world, with R/2 4.1d, I was awash with these field names. What's more, I didn't speak a word of German. But it wasn't a problem - the brain is good at pattern matching in the first instance, and then when I had time, I looked up what they meant. BUKRS - Buchungskreis - Company Code (posting area). Right! And that served only to strengthen the slot in my brain that remembered that field name.</p>
-<p>This argument reminds me of an exhortation I saw the other day in a handbook for writing documentation, or even blog posts. Write using simple words, in simple terms. To be honest, I find that ever so slightly insulting to the reader. </p>
-<p>English is my first language. I could say that German is my second language, and that's pushing it, a lot. While I was learning German in the early days (mostly by osmosis), I used to read technical articles and came across words that I hadn't seen before. Guess what? I looked them up, and my knowledge expanded. Not only relating directly to that word, but also to other future words that shared the same root.</p>
-<p>Anyway, what am I saying here in this journal entry? I guess, at the end of the day, it's a lovely first world problem - debating what convention we prefer for our field names. It's pleasant to discuss, expressing our opinions is a healthy way to pass the time, and helps me keep sharp, as there are always great alternative opinions out there that challenge my thinking. And I like that. For me, sharing my thoughts, having them challenged, and learning - that's what it's all about. </p>
-<p>And for those who still can't figure out why I like the 5 char uppercase names, it's because they don't have all the problems that longer, mixed case names have, that I described above :-)</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-04-07 16:27:58 One consequence of using repo issues for journal e…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/18</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/18"/>
-        <updated>2021-04-07T15:28:04.000Z</updated>
-        <content type="html"><![CDATA[<p>One consequence of using repo issues for journal entries is that it's quite open.</p>
-<p>I just noticed that someone has added an issue (#14) recently and I'm currently not quite sure how I feel about it. The content of the issue is innocuous enough, and I think on balance I currently like how open things are. I've made efforts in the mechanics to guard against this sort of thing in that issues that are not created by me are not going to trigger any sort of update or processing.</p>
-<p>In the workflow (which is triggered when an issue is created or updated), there are two jobs, <code>generate</code> (generate the feed and recent content flow) and <code>tweet</code> (tweet that there's a new entry).</p>
-<p>The <code>generate</code> job has an <code>if</code> condition like this:</p>
-<pre><code class="yaml language-yaml">if: github.actor == github.repository_owner &amp;&amp; contains(github.event.issue.labels.*.name, 'entry')
-</code></pre>
-<p>This checks that the <code>actor</code> (the person involved in the event that triggered the workflow) is the same person as the <code>repository_owner</code>, in other words, me. It also checks that the issue has the <code>entry</code> label (see #9 as to why this is).</p>
-<p>The second job, <code>tweet</code>, also has an <code>if</code> condition, like this:</p>
-<pre><code class="yaml language-yaml">if: github.event.action == 'opened'
-</code></pre>
-<p>This ensures that a tweet is only sent when an issue is created, not also if it's updated.</p>
-<p>But the <code>tweet</code> job also has this:</p>
-<pre><code class="yaml language-yaml">needs: generate
-</code></pre>
-<p>Which means that <code>tweet</code> only runs if <code>generate</code> completes successfully. Which in turn implies that <code>generate</code>'s checks also apply here, indirectly.</p>
-<p>That's good enough for me for now.</p>
-<p>I'm still not sure how I want to proceed with this external issue. I'll have to think about it. It's a chance for engagement, but perhaps I should just automatically delete them. Let's see.</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-04-07 09:04:01 Does it make sense to create a workflow to clean u…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/15</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/15"/>
-        <updated>2021-04-07T08:07:23.000Z</updated>
-        <content type="html"><![CDATA[<p>Does it make sense to create a workflow to clean up old workflow runs?</p>
-<p>I'm using my dwr script right now to clean up some of the workflow runs in my repositories. It got me thinking - what about an automatic cleanup? Would it make sense to write a workflow … to delete old workflow runs on a regular basis? There's a sort of pleasant balance in there as well, in that eventually, the runs from these cleanup workflows would be themselves cleaned up too.</p>
-<p>In case you're interested in the <code>dwr</code> script as it stands right now, you can find it <a href="https://github.com/qmacro/dotfiles/blob/master/scripts/dwr">here</a> in my dotfiles.</p>
-<p>What do you think? Is it worth following this thought to an experimental cleanup workflow definition? What would that look like?</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-03-25 16:39:40 I love the "Today I Learned" (TIL) idea, and even …]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/13</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/13"/>
-        <updated>2021-03-25T17:04:24.000Z</updated>
-        <content type="html"><![CDATA[<p>I love the "Today I Learned" (TIL) idea, and even have a TIL style blog called <a href="https://qmacro.org/autodidactics/">autodidactics</a>. That said, I'm wondering if there's also value in reifying what might be the other side of the TIL coin, i.e. the "Want To Learn" (WTL) idea.</p>
-<p>There are plenty of things that I wish I knew, from understanding specific concepts, to being able to achieve specific goals. At the very small end of the "achieve specific goals" stage there's Stack Overflow to give me answers, and that's fine. But sometimes I don't want the answer on a plate, I want to work for it, as - if time permits - the journey of effort is often fun and nearly always rewarding.</p>
-<p>Here's an example:</p>
-<ul>
-<li>WTL the best way to mass-delete logs from GitHub Actions workflow runs</li>
-</ul>
-<p>I've read somewhere that right now it's not possible from the Actions web interface, so I'm guessing the answer might be in the use of one or more API endpoints. I know that going from where I am now to understanding how to do it will improve my knowledge and be useful too.</p>
-<p>The essence of this WTL is that it's tangible and I'll know when I've flipped it into a TIL. I know that some of the other stuff I wish I knew is less like that (grokking specific technical concepts) but not everything is black and white.</p>
-<p>I think that now I have given a name to this type of thought ("how do I do / understand that?") that swirl around my brain, bumping into and otherwise disturbing what I'm actually trying to think about, it will help. I can capture the thought as a WTL and move on.</p>
-<p>Now, where are those GitHub API docs?</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-03-25 12:09:25 What else do I need for the basic setup of my jour…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/9</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/9"/>
-        <updated>2021-03-25T12:19:09.000Z</updated>
-        <content type="html"><![CDATA[<p>What else do I need for the basic setup of my journalling here with Thinking Aloud?</p>
-<p>On the one hand, I don't want to over-complicate things - part of the idea is to have a minimal setup. On the other hand, there are probably aspects that I'm still missing.</p>
-<p>One in particular is the ability to "go meta". In other words, I want to be able to raise issues for the repo-based journalling mechanism itself, so I can record something that's amiss and then get around to addressing that.</p>
-<p>But while I'm using issues in the simplest possible way, that's not going to work, as I'll pick up those "real" issues too in my journalling output. So it's time to turn to labels. I've alluded to the use of labels, which can be assigned to issues on GitHub, and while I was thinking more about journal entry categories, I really need a label to distinguish actual journal entries from non-journal entries.</p>
-<p>I was originally thinking of having a label for non-journal entries, such as "issue", but that seems a little silly; better to have a positive "entry" label, as I can easily add that to my "new journal entry" mechanism - the <code>gh</code> GitHub CLI lets me assign labels on issue creation, <a href="https://cli.github.com/manual/gh_issue_create">like this</a>:</p>
-<pre><code class="shell language-shell">; gh issue create --label entry --title "..."
-</code></pre>
-<p>Then it's easy to show the list of actual journal entry issues, using the very capable <a href="https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests">search & filter syntax</a>. I think this is what I'll implement next, and then I can record this sort of "missing feature" entry as an actual issue rather than an entry.</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-03-25 09:53:26 Some thoughts on learning, and how I pick the topi…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/7</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/7"/>
-        <updated>2021-03-25T10:13:52.000Z</updated>
-        <content type="html"><![CDATA[<p>Some thoughts on learning, and how I pick the topics. </p>
-<p>Starting from a <a href="https://twitter.com/alexellisuk/status/1374657364813619201">tweet from Alex Ellis on learning & age</a>, in one of the ensuing threads, Jeroen Jacobs described the challenges of learning while working, and the challenge of that learning being non-billable and / or fleeting due to lack of opportunities to practise.</p>
-<p>I've been a life long learner, not initially consciously by any means, but, helped by my <a href="https://blogs.sap.com/2018/10/01/monday-morning-thoughts-impostor-syndrome/">impostor syndrome</a> I've always strived to flesh out my knowledge and remain above water. With computing in general, and enterprise computing in particular, I've found that it was usually natural to discover related topics that I had little idea about.</p>
-<p>So those were the natural targets for new learning efforts. Not only because I could relate to them because they were to some degree relevant to the task at hand, but also because I had started to figure out that the more I knew about those related topics, the greater my overall understanding of things and the more useful I became.</p>
-<p>To take an example - in the early days of APIs, when we started to move beyond the proprietary protocols and approaches (such as remote function calls and the RFC SDK), it was HTTP that sat firmly front and centre as the protocol around which the API world was beginning to revolve. While I could have got by with just a shallow understanding of HTTP, enough to create, make and debug API calls, I dove right in, to the extent that I call <a href="https://tools.ietf.org/html/rfc2616">RFC 2616</a> a friend. Moreover, that journey led me to properly understand that HTTP is an <em>application</em> protocol, which in turn helped me understand why the whole Web Services Deathstar was destined from birth for self-destruction, because it was built on false foundations (the abuse of HTTP as a <em>transport</em> protocol). And of course, those investigations led me to Roy Fielding's thesis and the concepts of Representational State Transfer (REST), which -- to an extent -- underpins much of the API surface area today.</p>
-<p>In my journey of discovery here, everything I did eventually became relevant to my work. Not by chance, but, I think, by relation.</p>
-<p>So now where do I go with that? Well, while I'm not yet using GraphQL (except for an experiment with GitHub's API surface), I have at least <a href="https://blogs.sap.com/2018/09/03/monday-morning-thoughts-considering-graphql/">looked into it</a>, at least enough for now to understand how it differs from, say, RESTful approaches, and, as <a href="https://en.wikipedia.org/wiki/Nigel_Molesworth">Molesworth</a> might say, in a "kno yore enemie" kind of way. And I do know that GraphQL most likely <em>will</em> feature in my future, so it's something I'll look into.</p>
-<p>Anyway, what am I saying here? I think I'm saying that there's a semi-conscious filtering that goes on in my head when it comes to continuous learning; filtering that is designed to protect me from burnout, from learning stuff that I'll never get a chance to practise, but most of all to take advantage of a key aspect of learning - helping me to build the next layer of understanding.</p>
-<p>An additional thought here relates to the need for practice. Jeroen <a href="https://twitter.com/JeroenJacobs79/status/1374977310491836420">commented</a>:</p>
-<blockquote>
-  <p>… the things I learn outside business hours, well it seems I forget most of it if I don't apply it during the work day</p>
-</blockquote>
-<p>This reminded me of a great conversation between Scott Hanselman and Romain Goyet on a new pocket calculator, in the Hanselminutes podcast episode <a href="https://hanselminutes.com/779/its-time-for-a-new-kind-of-calculator-with-numworks-romain-goyet">It's time for a new kind of calculator with NumWorks' Romain Goyet</a>. Romain talked about energy consumption and eventual battery drain in devices, and drew out the distinction between dynamic RAM and static RAM. </p>
-<p>I think our minds are a lot like dynamic RAM, in that they need to be regularly refreshed (perhaps not as frequently as dynamic RAM!) with the same information, lest that information loses synaptic relevance and fades away. </p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-03-24 15:44:46 So I've got the bare minimum set up for this journ…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/2</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/2"/>
-        <updated>2021-03-24T16:00:34.000Z</updated>
-        <content type="html"><![CDATA[<p>So I've got the bare minimum set up for this journal, in the <a href="https://github.com/qmacro/thinking-aloud">thinking-aloud</a> repository:</p>
-<ul>
-<li>issues to contain my journal entries, and possibly conversations about them (via the comments)</li>
-<li>a simple <a href="https://github.com/qmacro/thinking-aloud/blob/main/feed">Atom feed generator</a> that will build an Atom 1.0 feed from a JSON list of issues that I can retrieve from the GitHub API - the feed's URL is https://raw.githubusercontent.com/qmacro/thinking-aloud/main/feed.xml</li>
-<li>labels that I can assign to the issues for eventual categorisation (I have <a href="https://github.com/qmacro/thinking-aloud/blob/08bf3f98064237c35b3bf7ae4fb16b5ecb9608b6/feed#L44">made provision for this in the feed generator already</a>)</li>
-<li>a GitHub Actions <a href="https://github.com/qmacro/thinking-aloud/actions/workflows/generate-feed.yml">workflow</a> that is triggered when an issue is created or edited and causes the feed to be rebuilt</li>
-</ul>
-<p>This was a pleasant few hours messing around on a day off. Well, I say pleasant, there was one unpleasant part which was trying (and failing) to parse and use the output from the <a href="https://github.com/octokit/request-action">octokit/request-action</a>.</p>
-<p>The silver lining in this though is that I realised that I could just use the <code>gh</code> CLI, as long as I supply the <code>GITHUB_TOKEN</code> env var with the appropriate (and auto-generated) secret value, <a href="https://github.com/qmacro/thinking-aloud/blob/a8fda4c7705d26a30d47001885e6f20d4669a987/.github/workflows/generate-feed.yml#L21-L27">like this</a>:</p>
-<pre><code class="yaml language-yaml">- name: Generate feed
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: |
-    gh api "/repos/${GITHUB_REPOSITORY}/issues?sort=created&amp;direction=descending" \
-      | ./feed \
-      | tee feed.xml
-</code></pre>
-<p>If you're interested in following these journal entries, add the feed URL to your favourite feed reader: https://raw.githubusercontent.com/qmacro/thinking-aloud/main/feed.xml, and if you want to comment on any of the entries, you can do so in the comments to the corresponding issue.</p>]]></content>
-        <category label="entry"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-03-24 10:55:54 Can't help overthinking what I should have as my f…]]></title>
-        <id>https://github.com/qmacro/thinking-aloud/issues/1</id>
-        <link href="https://github.com/qmacro/thinking-aloud/issues/1"/>
-        <updated>2021-03-24T11:03:40.000Z</updated>
-        <content type="html"><![CDATA[<p>Can't help overthinking what I should have as my first entry in this journal. Reminds me of the feeling of starting a new notebook, and agonising over what should be on the first page - it must be neat and permanently relevant. Of course, that's nonsense.</p>
-<p>So I thought I'd just start typing. After all, the idea of this journal is to allow me to record thoughts in as friction-free a way as possible. Part of that is having a low barrier to writing, but also a low filter threshold.</p>
-<p>Anyway, as usual, I've spent the last hour yak shaving, setting up a little system where I can just hit <code>j</code> and get directly to typing in my thoughts.</p>
-<p>Hitting <code>j</code> starts a new <code>tmux</code> 'JOURNAL' session, or attaches to an existing one, and then uses <code>gh issue create</code> to initiate the process. The title is easy - I wanted to avoid having to think about what I should title each journal entry, so I'm simply using a timestamp. The <code>gh issue create</code> process then takes me into <code>vim</code> whereupon some <code>vim</code> configuration notices that it's a Markdown buffer that I'm editing, and throws me into <code>Goyo</code> which is a fantastic way to focus on writing.</p>
-<p>And that's it. I'm not exactly sure whether things will work when I exit this buffer, I guess the only way to find out is to try it. Here goes.</p>]]></content>
+        <id>https://github.com/m040601/issuethinking/issues/1</id>
+        <link href="https://github.com/m040601/issuethinking/issues/1"/>
+        <updated>2021-08-23T02:40:44.000Z</updated>
+        <content type="html"><![CDATA[<p>some serious issue here</p>]]></content>
         <category label="entry"/>
     </entry>
 </feed>
