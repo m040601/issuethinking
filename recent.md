@@ -1,3 +1,11 @@
+## tricky command line to put the 'entry' tag
+iiiiiii
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/9)
+
+<hr>
+
 ## with 'entry' from the cli
 big body
 
