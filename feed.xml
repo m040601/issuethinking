@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/m040601/issuethinking</id>
     <title>Issue Thinking Aloud</title>
-    <updated>2021-08-23T06:28:43.652Z</updated>
+    <updated>2021-08-23T06:29:35.855Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Issue Thinker Feed author</name>
@@ -37,7 +37,7 @@ with lots of ideas</div>]]></content>
         <category label="entry"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[so threadig is only one level in github discussions]]></title>
+        <title type="html"><![CDATA[(edited) so threadig is only one level in github discussions ]]></title>
         <id>https://github.com/m040601/issuethinking/issues/14</id>
         <link href="https://github.com/m040601/issuethinking/issues/14"/>
         <updated>2021-08-23T06:22:56.000Z</updated>
