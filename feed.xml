@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/m040601/issuethinking</id>
     <title>Issue Thinking Aloud</title>
-    <updated>2021-08-23T03:26:11.209Z</updated>
+    <updated>2021-08-23T03:35:32.192Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Issue Thinker Feed author</name>
@@ -18,7 +18,11 @@
         <id>https://github.com/m040601/issuethinking/issues/9</id>
         <link href="https://github.com/m040601/issuethinking/issues/9"/>
         <updated>2021-08-23T03:25:55.000Z</updated>
-        <content type="html"><![CDATA[<p>iiiiiii</p>]]></content>
+        <content type="html"><![CDATA[<p>iiiiiii</p>
+<blockquote>
+  <p>will this comment trigger any action ???</p>
+</blockquote>
+<p>only if body or title edits probably</p>]]></content>
         <category label="entry"/>
     </entry>
     <entry>

@@ -1,6 +1,8 @@
 ## tricky command line to put the 'entry' tag
 iiiiiii
+> will this comment trigger any action ???
 
+only if body or title edits probably
 
 [Discuss](https://github.com/m040601/issuethinking/issues/9)
 
