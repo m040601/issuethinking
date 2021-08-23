@@ -1,3 +1,11 @@
+## will it go
+iiiiiii
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/10)
+
+<hr>
+
 ## tricky command line to put the 'entry' tag
 iiiiiii
 > will this comment trigger any action ???
