@@ -17,6 +17,15 @@ here and there
 
 <hr>
 
+## was: from the cli no entry, no has it; and lotz of anzerws
+blaaoeu
+
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/7)
+
+<hr>
+
 ## Another issue with 'entry'
 bla
 
