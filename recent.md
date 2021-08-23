@@ -1,3 +1,10 @@
+## yes it will go now
+null
+
+[Discuss](https://github.com/m040601/issuethinking/issues/11)
+
+<hr>
+
 ## will it go
 iiiiiii
 
