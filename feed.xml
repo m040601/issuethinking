@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/m040601/issuethinking</id>
     <title>Issue Thinking Aloud</title>
-    <updated>2021-08-23T06:29:35.855Z</updated>
+    <updated>2021-08-23T10:36:47.723Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Issue Thinker Feed author</name>
@@ -13,6 +13,35 @@
     <link rel="self" href="https://github.com/m040601/issuethinking"/>
     <subtitle>A journal</subtitle>
     <rights>Issue Thinker Copyright</rights>
+    <entry>
+        <title type="html"><![CDATA[2021-08-23 11:36:30 Direct from tmux with the help of gh create issue]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/20</id>
+        <link href="https://github.com/m040601/issuethinking/issues/20"/>
+        <updated>2021-08-23T10:36:32.000Z</updated>
+        <content type="html"><![CDATA[<p>another quick thinking
+direct from the shell</p>
+<h2 id="chapter1">chapter1</h2>
+<p>bla
+bla</p>
+<h2 id="chapter2">chapter2</h2>
+<p>bla
+bla</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+…
+11:35</p>
+<p>TODO:
+I Solenmly Swear That I'm Up To No Good
+23-08-2021
+…</p>
+<ul>
+<li>markdown</li>
+<li>stufffzz</li>
+</ul>
+<p>TODO:
+I Solenmly Swear That I'm Up To No Good
+23-08-2021</p>]]></content>
+        <category label="entry"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[some new discussion]]></title>
         <id>https://github.com/m040601/issuethinking/issues/17</id>

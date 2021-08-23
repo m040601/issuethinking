@@ -1,3 +1,43 @@
+## 2021-08-23 11:36:30 Direct from tmux with the help of gh create issue
+another quick thinking
+direct from the shell
+
+chapter1
+----
+
+bla
+bla
+
+chapter2
+----
+
+bla
+bla
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+...
+11:35
+
+TODO:
+I Solenmly Swear That I'm Up To No Good
+23-08-2021
+...
+
+
+- markdown
+- stufffzz
+
+
+
+TODO:
+I Solenmly Swear That I'm Up To No Good
+23-08-2021
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/20)
+
+<hr>
+
 ## some new discussion
 ### Discussed in https://github.com/m040601/issuethinking/discussions/16
 
