@@ -1,3 +1,12 @@
+## sometitle
+some body talk
+bla
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/21)
+
+<hr>
+
 ## 2021-08-23 11:36:30 Direct from tmux with the help of gh create issue
 another quick thinking
 direct from the shell
