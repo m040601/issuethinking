@@ -1,3 +1,22 @@
+## with 'entry' from the cli
+big body
+
+
+with
+----
+
+lotz of markdown
+here and there
+
+
+- maple
+- sirpp
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/8)
+
+<hr>
+
 ## Another issue with 'entry'
 bla
 
