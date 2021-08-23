@@ -1,3 +1,15 @@
+## some new discussion
+### Discussed in https://github.com/m040601/issuethinking/discussions/16
+
+<div type='discussions-op-text'>
+
+<sup>Originally posted by **m040601** August 23, 2021</sup>
+with lots of ideas</div>
+
+[Discuss](https://github.com/m040601/issuethinking/issues/17)
+
+<hr>
+
 ## actions stuck again
 aarrgh
 
