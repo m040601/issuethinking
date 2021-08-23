@@ -2,7 +2,7 @@
 
 A journal, of sorts.
 
-You can read the [most recent journal entries here](recent.md). Each journal
+You can read the [most recent journal entries here an "recent.md"](recent.md). Each journal
 entry is an
 [issue](https://github.com/m040601/issuethinking/issues?q=is%3Aopen+is%3Aissue+label%3Aentry).
 You can follow by adding the [Atom
@@ -12,4 +12,6 @@ your reader.
 Read about the origins of Thinking Aloud in this post: [A new journal
 experiment - Thinking
 Aloud](https://qmacro.org/2021/03/25/a-new-journal-experiment-thinking-aloud/).
+
+Variation with, "entries.md", sorted by category, [til/render at main · rsletta/til](https://github.com/rsletta/til/blob/main/render)
 
