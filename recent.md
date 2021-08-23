@@ -1,3 +1,13 @@
+## 2021-08-23 06:20:34 some title
+what will come out of this with no title ?
+
+no 'entry' tag ?
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/12)
+
+<hr>
+
 ## yes it will go now
 null
 
