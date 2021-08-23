@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/m040601/issuethinking</id>
     <title>Issue Thinking Aloud</title>
-    <updated>2021-08-23T05:20:50.991Z</updated>
+    <updated>2021-08-23T06:25:56.535Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Issue Thinker Feed author</name>
@@ -13,6 +13,24 @@
     <link rel="self" href="https://github.com/m040601/issuethinking"/>
     <subtitle>A journal</subtitle>
     <rights>Issue Thinker Copyright</rights>
+    <entry>
+        <title type="html"><![CDATA[actions stuck again]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/15</id>
+        <link href="https://github.com/m040601/issuethinking/issues/15"/>
+        <updated>2021-08-23T06:25:40.000Z</updated>
+        <content type="html"><![CDATA[<p>aarrgh</p>]]></content>
+        <category label="entry"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[so threadig is only one level in github discussions]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/14</id>
+        <link href="https://github.com/m040601/issuethinking/issues/14"/>
+        <updated>2021-08-23T06:22:56.000Z</updated>
+        <content type="html"><![CDATA[<p>and threading…</p>
+<p>… nuff said</p>
+<p><em>Originally posted by @m040601 in https://github.com/m040601/issuethinking/discussions/13#discussioncomment-1220665</em></p>]]></content>
+        <category label="entry"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2021-08-23 06:20:34 some title]]></title>
         <id>https://github.com/m040601/issuethinking/issues/12</id>

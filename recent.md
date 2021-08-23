@@ -1,3 +1,21 @@
+## actions stuck again
+aarrgh
+
+[Discuss](https://github.com/m040601/issuethinking/issues/15)
+
+<hr>
+
+## so threadig is only one level in github discussions
+and threading...
+
+... nuff said
+
+_Originally posted by @m040601 in https://github.com/m040601/issuethinking/discussions/13#discussioncomment-1220665_
+
+[Discuss](https://github.com/m040601/issuethinking/issues/14)
+
+<hr>
+
 ## 2021-08-23 06:20:34 some title
 what will come out of this with no title ?
 
