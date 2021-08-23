@@ -8,6 +8,7 @@ jobs:
   # First, generate the new feed XML and 'recent' content based on the issues list.
   # comment this out ???
   # if: github.actor == github.repository_owner && contains(github.event.issue.labels.*.name, 'entry')
+  if: github.actor == github.repository_owner
   generate:
     runs-on: ubuntu-latest
     steps:
