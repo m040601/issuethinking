@@ -1,3 +1,11 @@
+## 2022-01-13 20:13:57 tittle of this thinking thing
+thinking about groups.io
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/24)
+
+<hr>
+
 ## 2021-12-27 10:54:31 this time a nice title
 another issuery
 naou ao
