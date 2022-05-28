@@ -1,3 +1,12 @@
+## created with gh issue 22:35
+iiiiiiiiiiiiiiiiiii
+iiiiiiiiiiiiiiiiii
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/26)
+
+<hr>
+
 ## 2022-05-28 22:30:58 titly may22
 some issue with tmux
 
