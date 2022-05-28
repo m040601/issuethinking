@@ -1,3 +1,13 @@
+## 2022-05-28 22:30:58 titly may22
+some issue with tmux
+
+bblao euaoeu 
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/25)
+
+<hr>
+
 ## 2022-01-13 20:13:57 tittle of this thinking thing
 thinking about groups.io
 
