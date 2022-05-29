@@ -1,3 +1,11 @@
+## 2022-05-29 01:39:47 another issue from tmux 0139
+yet another body of another issue, diretcly from tmux
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/27)
+
+<hr>
+
 ## created with gh issue 22:35
 iiiiiiiiiiiiiiiiiii
 iiiiiiiiiiiiiiiiii
