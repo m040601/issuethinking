@@ -1,3 +1,12 @@
+## 2022-06-08 18:51:36 jun22 posted from tmux
+some body text about an insseue
+in tmux
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/28)
+
+<hr>
+
 ## 2022-05-29 01:39:47 another issue from tmux 0139
 yet another body of another issue, diretcly from tmux
 

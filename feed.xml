@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/m040601/issuethinking</id>
     <title>Issue Thinking Aloud</title>
-    <updated>2022-05-29T00:40:04.270Z</updated>
+    <updated>2022-06-08T17:51:54.744Z</updated>
     <generator>NPM module feed (https://www.npmjs.com/package/feed)</generator>
     <author>
         <name>Issue Thinker Feed author</name>
@@ -13,6 +13,15 @@
     <link rel="self" href="https://github.com/m040601/issuethinking"/>
     <subtitle>A journal</subtitle>
     <rights>Issue Thinker Copyright</rights>
+    <entry>
+        <title type="html"><![CDATA[2022-06-08 18:51:36 jun22 posted from tmux]]></title>
+        <id>https://github.com/m040601/issuethinking/issues/28</id>
+        <link href="https://github.com/m040601/issuethinking/issues/28"/>
+        <updated>2022-06-08T17:51:37.000Z</updated>
+        <content type="html"><![CDATA[<p>some body text about an insseue
+in tmux</p>]]></content>
+        <category label="entry"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2022-05-29 01:39:47 another issue from tmux 0139]]></title>
         <id>https://github.com/m040601/issuethinking/issues/27</id>
