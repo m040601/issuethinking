@@ -1,3 +1,13 @@
+## 2024-01-22 03:41:27 jan24 test title
+test issue jan24
+
+bla bla
+
+
+[Discuss](https://github.com/m040601/issuethinking/issues/29)
+
+<hr>
+
 ## 2022-06-08 18:51:36 jun22 posted from tmux
 some body text about an insseue
 in tmux
